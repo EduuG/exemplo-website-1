@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <title>Teste Front End</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <div class="logo">
+                    <h1>LOGO</h1>
+                </div>
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Foo</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Baz</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Qux</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Quux</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Quuz</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Entrar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link signup-button">CADASTRE-SE</a></li> 
+                </ul>
+            </div>
+
+            <div class="hamburger-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="./assets/img/32px-Hamburger_icon_white.svg.png"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Foo</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Bar</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Baz</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Qux</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Quux</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Quuz</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Entrar</a></li>
+                <li class="nav-item"><button class="nav-link signup-button">CADASTRE-SE</button></li> 
+            </ul>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="tests">
+            <div id="test-1">
+                <div class="person-1">
+                    <img class="person-image" src="./assets/img/person1.jpg">
+                    <div class="info">
+                        <h2 class="name">Nome pessoa</h2>
+                        <p class="points">3.000 pontos</p>
+                        <p class="show-tel-number">ver telefone</p>
+                    </div>
+                </div>
+
+                <div class="person-2">
+                    <img class="person-image" src="./assets/img/person2.jpg">
+                    <div class="info">
+                        <h2 class="name">Nome pessoa</h2>
+                        <p class="points">1.260 pontos</p>
+                        <p class="show-tel-number">ver telefone</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="test-2">
+                <h1>Mande uma mensagem:</h1>
+                <input class="inputCPF" type="text" autocomplete="off" placeholder="Digite seu CPF" onkeypress="$(this).mask('000.000.000-00')">
+                <input class="inputTelNumber" type="text" autocomplete="off" placeholder="Digite seu telefone" onkeypress="$(this).mask('(00) 0000-0000')">
+                <textarea class="textArea" placeholder="Digite o assunto" autocomplete="off"></textarea>
+                <button class="sendMessage">Enviar Mensagem</button>
+            </div>
+
+            <div id="test-3">
+                <h1>Regra de 3</h1>
+                <div class="equation-area">
+                    <input id="numberA" placeholder="60" autocomplete="off" onkeypress="$(this).mask('000000000')">
+                    <img src="./assets/img/line.png">
+                    <input id="numberB" placeholder="100" autocomplete="off" onkeypress="$(this).mask('000000000')">
+                    <input id="numberC" placeholder="30" autocomplete="off" onkeypress="$(this).mask('000000000')">
+                    <img src="./assets/img/line.png">
+                    <input id="result" autocomplete="off" readonly>
+                </div>
+                <button class="show-result">Calcular</button>
+            </div>
+
+            <div id="test-4" class="two-rows-test">
+                <div class="test-4-container">
+                </div>
+                <button class="open-modal">ABRIR IMAGEM NO MODAL</button>
+            </div>
+
+            <div id="test-5">
+            </div>
+        </div>
+    </div>
+
+    <dialog class="modal">
+        <div class="modal-titlebar">
+            <button class="close-modal">
+                <img src="./assets/img/close-cross.png">
+            </button>
+        </div>
+        <div class="modal-content">
+            <img src="./assets/img/home.jpg">
+        </div>
+    </dialog>            
+    
+    <div class="modal-background"></div>
+
+    <footer>
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Termos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contatos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <p class="copyright-text">© Copyright 2023. Todos os direitos reservados.</p>
+                <div class="logo">
+                    <h2>LOGO</h2>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
